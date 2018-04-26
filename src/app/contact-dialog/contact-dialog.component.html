@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="form__input-container">
+      <div class="form__input-container form__input-container-2">
         <div class="form__label">
           <span>Phone number</span>
           <span class="input-checker" [ngClass]="{'checked' : phoneNumber}">
@@ -78,10 +78,15 @@
         </div>
       </div>
 
-      <div class="text--center form__input-container">
+      <div class="text--center form__input-container show-md">
         <a class="send-button" (click)="closeDialog()">
           Send my email 
           <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+      <div class="text--right form__input-container show-xs">
+        <a class="send-button--cyan" (click)="closeDialog()">
+          Send
         </a>
       </div>
     </form>

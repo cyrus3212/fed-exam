@@ -65,6 +65,9 @@ $cyan: #02c7c6;
         &-container{
             flex-basis:100%;
             margin:10px 0px;
+            &-2{
+                flex-basis: 50%;
+            }
         }
     }
     input{
@@ -109,6 +112,10 @@ $cyan: #02c7c6;
         color:$cyan;
         font-weight: bold;
         font-size: 30px;
+    }
+    &--cyan{
+        color:$cyan;
+        margin-right:20px;
     }
 }
 

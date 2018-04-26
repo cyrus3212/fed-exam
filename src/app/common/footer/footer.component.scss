@@ -11,5 +11,13 @@ footer{
         padding:20px;
         font-size: 12px;
         color:white;
+        .show-xs{
+            padding:10px;
+            margin-bottom: 10px;
+            border-bottom:1px solid white;
+            i{
+                font-size: 12px;
+            }
+        }
     }
 }

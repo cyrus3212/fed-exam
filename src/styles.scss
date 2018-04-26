@@ -29,18 +29,22 @@ input{
 .mat-checkbox-checked.mat-primary .mat-checkbox-background{
     background: $blue;
 }
+.cdk-overlay-pane{
+    max-width: 95vw !important;
+}
 
 //DEFAULTS
 main{
     min-height:100vh;
     padding-top:120px;
 }
-.container{
-    padding: 0px 40px;
-}
+
 .text{
     &--center{
         text-align: center;
+    }
+    &--right{
+        text-align: right;
     }
     &--blue{
         color:$blue
@@ -67,5 +71,29 @@ main{
     &--lightblue{
         border:2px solid $light-blue !important;
         box-shadow: none !important;
+    }
+}
+
+@media (min-width: 770px){
+    .container{
+        padding: 0px 40px;
+    }
+    .show-md{
+        display: inline-block;
+    }
+    .show-xs{
+        display: none;
+    }
+}
+
+@media (max-width: 769px){
+    main{
+        padding-top:5px !important;
+    }
+    .show-xs{
+        display: inline-block;
+    }
+    .show-md{
+        display: none;
     }
 }

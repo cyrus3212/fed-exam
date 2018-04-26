@@ -12,7 +12,7 @@
   <div class="header-lower">
 
     <div class="header-lower__logo">
-      <img src="/assets/images/pool-pros-logo.png" alt="">
+      <img src="./assets/images/pool-pros-logo.png" alt="">
     </div>
 
     <ul class="header-lower__nav">
@@ -22,11 +22,27 @@
       <li>Services</li>
     </ul>
 
-      <button mat-raised-button 
-        class="header-lower__button button-border--blue"
-        ><i class="material-icons">location_on</i> Find a Pool Pro
-      </button>
+    <button mat-raised-button class="header-lower__button button-border--blue">
+      <i class="material-icons">location_on</i> 
+      Find a <span class="show-md">Pool</span> Pro
+    </button>
 
-    <ul></ul>
+    <a class="mobile_menu" (click)="showMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="mobile_menu__nav" [ngClass]="{'show' : isShowMenu}">
+      <div class="text--center">
+        <span class="text--bold">MENU</span>
+        <span class="menu-close" (click)="closeMenu()"><i class="material-icons">clear</i></span>
+      </div>
+      <ul>
+        <li><span>Pools & Spas</span> <i class="material-icons">chevron_right</i></li>
+        <li><span>Supplies</span> <i class="material-icons">chevron_right</i></li>
+        <li><span>Resources</span> <i class="material-icons">chevron_right</i></li>
+        <li><span>Services</span> <i class="material-icons">chevron_right</i></li>
+      </ul>
+    </div>
   </div>
 </header>

@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
   commercialType = false;
   serviceType = false;
   isLoading = false;
+  isShowFilter = false;
 
   dealers = [];
   filteredDealers = [];
@@ -104,7 +105,7 @@ export class HomeComponent implements OnInit {
       // HIDE LOADING
       this.isLoading = false;
       this.filteredDealers = tempDealers; 
-    }, 1300)
+    }, 1500)
 
   }
 
@@ -117,6 +118,10 @@ export class HomeComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       //
     });
+  }
+
+  showFilterCheckboxes() {
+    this.isShowFilter = !this.isShowFilter;
   }
 
 }

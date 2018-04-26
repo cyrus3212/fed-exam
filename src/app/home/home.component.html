@@ -1,6 +1,6 @@
 <main>
   <div class="body__background">
-    <img src="/assets/images/water-image.jpg" alt="">
+    <img src="./assets/images/water-image.jpg" alt="">
   </div>
 
   <!-- MAIN CONTENT -->
@@ -10,9 +10,12 @@
     <div class="filter">
       <div class="filter__result">
         <span class="text--blue">{{filteredDealers.length}} dealers in {{dealers.length}}</span>
-        <span class="filter__result-title">Filter Results</span>
+        <span class="filter__result-title" (click)="showFilterCheckboxes()">
+          <span [ngClass]="{'show-filter' : isShowFilter}">Filter Results</span>
+          <i class="material-icons filter-down">keyboard_arrow_down</i>
+        </span>
       </div>
-      <div class="filter__checkboxes">
+      <div class="filter__checkboxes" [ngClass]="{'show-filter' : isShowFilter}">
           <mat-checkbox *ngFor="let type of filterTypes"
             color="primary"
             (change)="onChangeCheckbox(type.value)">
@@ -30,18 +33,24 @@
     <!-- FILTER RESULTS -->
     <div *ngIf="!isLoading" class="card__container">
       <div  *ngFor="let dealer of filteredDealers" class="card">
+        
         <div class="card__title">{{dealer.name}}</div>
+        
         <div class="card__contact">
           <i class="material-icons">local_phone</i>
+          <span class="show-xs">Tap to call</span>
           {{dealer.phone1}}
         </div>
+
         <div class="text--italic card__hint">Can’t talk now? Click below to send an email.</div>
+        
         <div class="card__email">
           <button mat-raised-button 
             class="button-border--lightblue"
             (click)="openContactDialog(dealer)"
           >Contact this Pro</button>
         </div>
+
         <div class="card__business-hours">
             <div class="text--bold">Business Hours</div>
             <div>Weekdays 7:00am - 7:00pm</div>
@@ -50,16 +59,19 @@
             <div *ngIf="dealer.weekHours.sun">Sundays {{dealer.weekHours.sun}}</div>
             <div *ngIf="!dealer.weekHours.sun">Sundays CLOSED</div>
         </div>
+
         <ul class="card__certifications">
           <li  *ngFor="let certificate of dealer.certifications">
-            {{certificate}}
+            <span *ngIf="certificate == 'Service Pro'"><i class="material-icons">brightness_low</i></span>
+            <span *ngIf="certificate == 'Commercial Pro'"><i class="material-icons">group</i></span>
+            <span *ngIf="certificate == 'Installation Pro'"><i class="material-icons">star</i></span>
+            <span *ngIf="certificate == 'Residential Pro'"><i class="material-icons">store</i></span>
+            <span>{{certificate}}</span>
           </li>
         </ul>
+
       </div>
     </div>
     
   </div>
-  
-  
-  
 </main>

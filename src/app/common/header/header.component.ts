@@ -12,4 +12,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  isShowMenu = false;
+
+  showMenu() {
+    this.isShowMenu = true;
+  }
+
+  closeMenu() {
+    this.isShowMenu = false;
+  }
+
 }
