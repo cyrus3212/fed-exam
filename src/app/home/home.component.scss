@@ -1,0 +1,108 @@
+$gray: #f6f6f6;
+
+.body{
+    &__background{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.main{
+    &__content{
+        transform: translateY(-60px);
+        -webkit-transform: translateY(-60px);
+        -moz-transform: translateY(-60px);
+    }
+}
+
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray;
+    padding:20px;
+    border-radius: 10px;
+
+    &__result{
+        font-weight: bold;
+        margin-right:20px;
+        span{
+            display: inline-block;
+            margin:10px;
+        }
+        &-title{
+            border-left: 1px solid #ddd;
+            padding-left: 20px;
+        }
+    }
+
+    &__checkboxes{
+        mat-checkbox{
+            margin:10px;
+        }
+        
+    }
+}
+
+.test{
+    display: flex;
+        justify-content: space-between;
+}
+
+.card{
+    margin:10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #888;
+    flex-basis: 31%;
+    overflow: hidden;
+    &__hint{
+        font-size:12px;
+        text-align: center;
+        margin-bottom:20px;
+    }
+    &__container{
+        margin:20px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__title{
+        margin:20px;
+        color:#3f3f3f;
+        font-size: 26px;
+        border-bottom: 2px solid #ddd;
+        text-align: center;
+        padding-bottom: 20px;
+        min-height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__contact{
+        padding:20px;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 0px;
+    }
+    &__email{
+        text-align: center;
+    }
+    &__business-hours{
+        font-size:14px;
+        text-align: center;
+        margin:30px 0px 20px;
+    }
+    &__certifications{
+        padding:20px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        background:#f6f6f6;
+        min-height: 44px;
+        li{
+            flex-basis: 40%;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+$blue : #083d8c;
+$light-blue: #216ddf;
+
+footer{
+    .footer-upper{
+        background:$blue;
+        padding:20px;
+    }
+    .footer-lower{
+        background:$light-blue;
+        padding:20px;
+        font-size: 12px;
+        color:white;
+    }
+}

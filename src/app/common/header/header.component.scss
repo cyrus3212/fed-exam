@@ -1,0 +1,62 @@
+$blue : #083d8c;
+
+header{
+    position: fixed;
+    width:100%;
+    top:0px;
+    z-index: 1;
+
+    .header-upper{
+        background: $blue;
+        height:42px;
+        width: 100%;
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 12px;
+        a{
+            display: flex;
+            align-items: center;
+            i{
+                margin-left: 5px;
+                font-size:12px;
+            }
+        }
+    }
+
+    .header-lower{
+        display: flex;
+        padding: 20px 40px;
+        box-shadow: 1px 1px 4px #ddd;
+        background:white;
+
+        &__logo{
+            max-width: 200px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            img{
+                width:100%;
+            }
+        }
+
+        &__nav{
+            flex: 5;
+            justify-content: flex-end;
+            padding:0px 40px;
+            display: flex;
+            align-items: center;
+            li{
+                margin:0px 25px;
+                color: $blue;
+                font-weight: bold;
+            }
+        }
+
+        &__button{
+            flex: 1
+        }
+    }
+}
+

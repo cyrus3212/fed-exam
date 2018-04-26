@@ -1,0 +1,119 @@
+$gray: #616161;
+$light-gray: #f6f6f6;
+$blue: #083d8c;
+$cyan: #02c7c6;
+
+.dialog{
+    &__header{
+        padding:20px;
+        background:$blue;
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        &-label{
+            font-weight: bold;
+            font-size: 16px;
+        }
+        &-title{
+            font-size: 32px;
+        }
+        &-close:hover{
+            cursor: pointer;
+        }
+    }
+    &__content{
+        padding:20px;
+        max-height: 400px;
+        overflow: auto;
+    }
+
+    &__footer{
+        background: $light-gray;
+        color:$gray;
+        padding:20px;
+        margin:-20px;
+        font-size:12.5px;
+    }
+}
+
+.form{
+    background: $light-gray;
+    padding:20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:40px;
+
+    &__hint{
+        color:$gray;
+        margin-bottom:10px;
+    }
+
+    &__label{
+        display: flex;
+        justify-content: space-between;
+        font-size:14px;
+        color:$gray;
+        font-weight: bold;
+        align-items: center;
+        margin-bottom:5px;
+    }
+
+    &__input{
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        &-container{
+            flex-basis:100%;
+            margin:10px 0px;
+        }
+    }
+    input{
+        flex-basis:100%;
+        padding:15px 10px;
+        border:1px solid $light-gray;
+    }
+}
+
+.input{
+    &-checker{
+        border-radius:50%;
+        width:24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #bdbdbd;
+        i{
+            color:#f6f6f6;
+        }
+    }
+}
+
+.input-checker.checked{
+    border: 1px solid $cyan !important;
+    i{
+        color:$cyan !important;
+    }
+}
+
+.send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 10px;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    &:hover{
+        cursor: pointer;
+    }
+    i{
+        color:$cyan;
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+
+.button--cyan{
+    background: $cyan;
+    margin-right:5px;
+    color:white;
+}

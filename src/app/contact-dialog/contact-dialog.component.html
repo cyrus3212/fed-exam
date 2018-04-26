@@ -1,0 +1,98 @@
+<div class="dialog">
+  <div class="dialog__header">
+    <div>
+      <div class="dialog__header-label">EMAIL</div>
+      <div class="dialog__header-title">{{data.name}}</div>
+    </div>
+    <div class="dialog__header-close" (click)="closeDialog()">
+      <i class="material-icons">clear</i>
+    </div>
+  </div>
+  
+  <div class="dialog__content">
+    <div class="form__hint">Fill out the form below and {{data.name}} will get in touch.</div>
+    <form class="form">
+
+      <div class="form__input-container">
+        <div class="form__label">
+          <span>First and last name</span>
+          <span class="input-checker" [ngClass]="{'checked' : userName}">
+            <i class="material-icons">done</i>
+          </span>
+        </div>
+        <div class="form__input">
+          <input type="text" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+
+      <div class="form__input-container">
+        <div class="form__label">
+          <span>Phone number</span>
+          <span class="input-checker" [ngClass]="{'checked' : phoneNumber}">
+            <i class="material-icons">done</i>
+          </span>
+        </div>
+        <div class="form__input">
+          <input type="text" [(ngModel)]="phoneNumber" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+
+      <div class="form__input-container">
+        <div class="form__label">
+          <span>Email address</span>
+          <span class="input-checker" [ngClass]="{'checked' : email}">
+            <i class="material-icons">done</i>
+          </span>
+        </div>
+        <div class="form__input">
+          <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+        </div>
+      </div>
+
+      <div class="form__input-container">
+        <div class="form__label">
+          <span>Comments or questions</span>
+          <span class="text--italic">optional</span>
+        </div>
+        <div class="form__input">
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="form__input-container">
+        <div class="form__label">
+          <span>Do you currently own a pool or spa?</span>
+          <span class="text--italic">optional</span>
+        </div>
+        <div class="form__input">
+          <button mat-raised-button 
+            class="button--cyan"
+            [disabled]="isOwnPool"
+            (click)="toggleOwnPool()"
+          >Yes</button>
+          <button mat-raised-button
+            class="button--cyan"
+            [disabled]="!isOwnPool"
+            (click)="toggleOwnPool()"
+          >No</button>
+        </div>
+      </div>
+
+      <div class="text--center form__input-container">
+        <a class="send-button" (click)="closeDialog()">
+          Send my email 
+          <i class="material-icons">chevron_right</i>
+        </a>
+      </div>
+    </form>
+
+    <div class="dialog__footer">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+        ut aliquip ex.
+    </div>
+  </div>
+
+  
+</div>
