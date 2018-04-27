@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { MaterialModule } from './material.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 import { routes } from './app.route';
 import 'hammerjs';
 
@@ -36,7 +37,10 @@ import { FooterComponent } from './common/footer/footer.component';
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCl8jviVHxwADwdmwoH3H1Y6GDFZKCb2sg'
+    })
   ],
   entryComponents:[
     ContactDialogComponent

@@ -12,19 +12,22 @@
   <div class="header-lower">
 
     <div class="header-lower__logo">
-      <img src="./assets/images/pool-pros-logo.png" alt="">
+      <img src="./assets/images/pool-pros-logo.png" [routerLink]="['home']" alt="">
     </div>
 
     <ul class="header-lower__nav">
-      <li>Pools & Spas </li>
-      <li>Supplies</li>
-      <li>Resources</li>
-      <li>Services</li>
+      <li><a>Pools & Spas</a></li>
+      <li><a>Supplies</a></li>
+      <li><a>Resources</a></li>
+      <li><a>Services</a></li>
     </ul>
 
-    <button mat-raised-button class="header-lower__button button-border--blue">
-      <i class="material-icons">location_on</i> 
-      Find a <span class="show-md">Pool</span> Pro
+    <button mat-raised-button 
+      class="header-lower__button button-border--blue"
+      [routerLink]="['map']"
+      >
+        <i class="material-icons">location_on</i> 
+        Find a <span class="show-md">Pool</span> Pro
     </button>
 
     <a class="mobile_menu" (click)="showMenu()">
